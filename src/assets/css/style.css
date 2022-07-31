@@ -1,0 +1,81 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background: #ab04d7;
+  background: linear-gradient(90deg, #ab04d7 28%, #13d4a5 100%);
+}
+/*----------- Window container -----------*/
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+/*----------- Clock container -----------*/
+.container > .clock {
+  height: 100%;
+  width: 100%;
+  border-radius: 0.7rem;
+  background-color: #ffffffa4;
+  color: #eee;
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  grid-template-rows: 225px;
+  justify-items: center;
+  align-items: center;
+  box-shadow: #959da533 0px 8px 24px;
+}
+/*----------- Hours, minutes and seconds container -----------*/
+.container > .clock > .hours,
+.minutes,
+.seconds {
+  box-shadow: #959da533 0px 8px 24px;
+  background-color: #111;
+  border-radius: 0.7rem;
+  height: 75%;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+/*----------- Hours, minutes and seconds numbers -----------*/
+.container > .clock > .hours > .hour-number,
+.minute-number,
+.second-number {
+  font-size: 4.3rem;
+  font-weight: 200;
+}
+/*----------- Hours, minutes and seconds text -----------*/
+.container > .clock > .hours > .hour-text,
+.minute-text,
+.second-text {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+/*----------- Responsive -----------*/
+@media screen and (max-width: 650px) {
+  .container > .clock {
+    display: grid;
+    grid-template-columns: 225px;
+    grid-template-rows: repeat(3, 230px);
+  }
+
+  .container > .clock > .hours,
+  .minutes,
+  .seconds {
+    height: 85%;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}

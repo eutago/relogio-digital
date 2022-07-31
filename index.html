@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Relógio</title>
+    <!----------- Files CSS ---------->
+    <link rel="stylesheet" href="./src/assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="clock">
+        <!----------- Hours container ---------->
+        <div class="hours">
+          <p data-hour-number class="hour-number"></p>
+          <p class="hour-text">Horas</p>
+        </div>
+        <!----------- Minutes container ---------->
+        <div class="minutes">
+          <p data-minute-number class="minute-number"></p>
+          <p class="minute-text">Minutos</p>
+        </div>
+        <!----------- Seconds container ---------->
+        <div class="seconds">
+          <p data-second-number class="second-number"></p>
+          <p class="second-text">Segundos</p>
+        </div>
+      </div>
+    </div>
+    <!----------- Files JS ---------->
+    <script src="./src/app.js"></script>
+  </body>
+</html>
